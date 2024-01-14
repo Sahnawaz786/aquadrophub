@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body{
-    background-color: white;
-} */
+body{
+    overflow-x: hidden;
+}
 
 .bg-image{
     background-image: url('https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');

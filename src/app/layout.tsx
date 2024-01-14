@@ -4,6 +4,7 @@ import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs'
 import Navbar from '@/app/component/Navbar'
 import Footer from '@/app/component/Footer'
+import {Toaster} from 'sonner';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-    <html lang="en">
+    <html lang="en" className='overflow-x-hidden'>
       <body className={inter.className}>
         <Navbar/>
         {children}
+        <Toaster richColors />
         <Footer/>
       </body>
     </html>
