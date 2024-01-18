@@ -4,8 +4,26 @@
 
 body{
     overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+.footer{
+    width: 100vw;
+    margin-top: auto;
+}
+
+image{
+    width: auto;
+    height: auto;
 }
 
 .bg-image{
     background-image: url('https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+}
+
+.css-1q04gal-MuiDateCalendar-root{
+    background-color:whitesmoke;
 }

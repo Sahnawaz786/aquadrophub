@@ -3,7 +3,7 @@ import Order from '@/app/component/Order'
 
 const page = () => {
   return (
-   <Order/>
+   <Order />
   )
 }
 

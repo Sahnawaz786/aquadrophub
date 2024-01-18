@@ -1,48 +1,59 @@
-"use client";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import message from '@/app/utlis/alert';
 
-import React, { useState } from 'react';
-import Location from '@/app/component/Location';
+const Login = () => {
+  const [days, setDays] = useState(0);
 
-const Order = () => {
-
-    const [address,setAddress] = useState('');
-    const [pincode,setPincode] = useState('');
-
-  return <>
-    <div className='mt-1 ml-6 card w-96 bg-base-100 overflow-x-hidden mb-5'>
-      <h1 className='pl-2 text-xl text-blue-400'>Enter your Address 🚀 </h1>
-      <label className='form-control w-full max-w-xs'>
-        <div className='label'>
-          <span className='label-text'>Address 1 :</span>
-        </div>
-        <input
-          type='text'
-          placeholder='Ex - Gerukabri'
-          className='input input-bordered w-full max-w-xs'
-          value={address}
-          onChange={(e)=>setAddress(e.target.value)}
+  return (
+    <div className='mt-1 card w-96 bg-base-100 shadow-xl overflow-x-hidden'>
+      <figure >
+        <Image
+          src='https://cdn1.vectorstock.com/i/1000x1000/08/65/water-delivery-service-man-delivering-vector-21520865.jpg'
+          width={300}
+          height={300}
+          priority={true}
+          alt='Shoes'
         />
-      </label>
-      <label className='form-control w-full max-w-xs'>
-        <div className='label'>
-          <span className='label-text'>Pincode :</span>
+      </figure>
+      <div className='card-body'>
+        <h2 className='card-title text-blue-400'>Welcome to AquadropHub.com</h2>
+        <p className='text-xl'>
+          In how many days should we re-deliver water to your doorStep 😉
+        </p>
+        <select
+          title='selection'
+          className='select select-secondary w-full max-w-xs mt-3'
+          onChange={(e) => {
+            setDays(e.target.value);
+          }}
+        >
+          <option disabled selected>Pick Select the days : </option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10'>10</option>
+        </select>
+        <div className=' mt-3 card-actions justify-end'>
+          {days>0 ? (
+            <button onClick={()=>message('success','Redirecting you to the Order !')} className='btn btn-primary'>
+              <Link href={'/add-address'}>Order Now</Link>
+            </button>
+          ) : (
+            <button className='btn btn-primary' onClick={(e)=>message('error','Pls enter a valid day !')} > Order Now</button>
+          )}
         </div>
-        <input
-          type='number'
-          placeholder='Ex - 783390'
-          className='input input-bordered w-full max-w-xs'
-          value={pincode}
-          onChange={(e)=>setPincode(e.target.value)}
-        />
-      </label>
-
-     {/* <Location/> */}      
+      </div>
     </div>
-    <button className="btn ml-8 w-72 mt-3 shadow-xl mb-3 btn-success">Success</button>
-
-    <Location/>
-
-  </>
+  );
 };
 
-export default Order;
+export default Login;
