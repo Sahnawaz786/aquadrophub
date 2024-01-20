@@ -20,7 +20,7 @@ const MyOrder = async () => {
           />
           <div>
             <h1 className='text-2xl m-1 font-bold text-blue-400'>Name: {user?.firstName + ' ' + user?.lastName}</h1>
-            <h1 className='text-xl m-3 font-bold text-blue-400'>Order Dates : </h1>
+            <h1 className='text-xl m-3 font-bold text-blue-400'>Delivery Dates 🙂 : </h1>
             <Calender/>
           </div>
         </div>

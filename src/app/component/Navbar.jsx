@@ -10,9 +10,10 @@ const Navbar = async () => {
     <>
       <div className='navbar'>
         <div className='flex-1'>
-          <a className='btn btn-ghost text-xl'>AquadropHub</a>
+         <Link href={'/'} > <a className='btn btn-ghost text-xl'>AquadropHub</a></Link>
         </div>
         <div className='flex-none gap-2'>
+        <input type="checkbox" value="dark" className="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"/>
           <div className='dropdown dropdown-end'>
             <div
               tabIndex={0}
@@ -37,10 +38,12 @@ const Navbar = async () => {
                 </button>
               </div>
             </div>
+            
             <ul
               tabIndex={0}
               className='mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52'
             >
+              
               <li>
                 {userId ? (
                   <div className='flex gap-1'>

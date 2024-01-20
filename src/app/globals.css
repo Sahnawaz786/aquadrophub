@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    overflow-x: hidden;
+    overflow-x: auto;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -23,6 +23,8 @@ image{
 .bg-image{
     background-image: url('https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
 }
+
+th{}
 
 .css-1q04gal-MuiDateCalendar-root{
     background-color:whitesmoke;
