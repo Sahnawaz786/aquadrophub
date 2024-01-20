@@ -18,7 +18,7 @@ const Driver = async () => {
     <div className='hero'>
       <div className='hero-content flex-col text-center lg:flex-row'>
         <Image
-          src={user?.imageUrl}
+          src={user?.imageUrl || ''}
           className='max-w-sm rounded-lg shadow-2xl'
           width={300}
           height={200}

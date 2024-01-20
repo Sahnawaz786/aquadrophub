@@ -1,8 +1,6 @@
 {
   "/page": "app/page.js",
-  "/my-order/page": "app/my-order/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/order/page": "app/order/page.js",
-  "/add-address/page": "app/add-address/page.js",
-  "/driver-profile/page": "app/driver-profile/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/add-address/page": "app/add-address/page.js"
 }

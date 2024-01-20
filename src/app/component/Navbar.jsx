@@ -10,7 +10,7 @@ const Navbar = async () => {
     <>
       <div className='navbar'>
         <div className='flex-1'>
-         <Link href={'/'} > <a className='btn btn-ghost text-xl'>AquadropHub</a></Link>
+         <p className='btn btn-ghost text-xl'><Link href={'/'} > AquadropHub</Link></p>
         </div>
         <div className='flex-none gap-2'>
         <input type="checkbox" value="dark" className="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"/>

@@ -13,7 +13,7 @@ const HomePage = () => {
             <p className='py-6'>
               Get your Water Delievered at your DoorStep by using AquaDropHub.com With just a tip of your finger get fresh water at your home 🙂
             </p>
-            <Link href={'/order'}> <button className='btn btn-primary'>Get Started</button></Link>
+            <button className='btn btn-primary'><Link href={'/order'}> Get Started</Link></button>
           </div>
         </div>
       </div>
