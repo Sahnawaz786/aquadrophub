@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-    <html lang="en" data-theme="light" className='overflow-x-hidden'>
+    <html lang="en" data-theme="dark" className='overflow-x-hidden'>
       <body className={inter.className}>
         <Navbar/>
         {children}

@@ -32,31 +32,29 @@ const Driver = async () => {
           <h1 className='text-xl m-3 font-bold text-green-400'>
             Today Delivery :{' '}
           </h1>
-          <div className='overflow-x-auto'>
-            <table className='table table-zebra'>
-              <thead>
-                <tr>
-                  <th>Number</th>
-                  <th>Name</th>
-                  <th>Address</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                {
-                  users.map((elem,index)=><tr key={elem.name}>
-                  <th>{index+1}</th>
-                  <td>{elem.name}</td>
-                  <td>{elem.address}</td>
-                  <td>Hel</td>
-                  {/* <button className="btn btn-success">Accept</button>
-                  <button className="btn btn-error">Reject</button> */}
-                </tr>)
-                }
-              </tbody>
-            </table>
-          </div>
+          {
+            users.map((elem)=><div key={elem.name} className='card w-90 bg-base-100 shadow-xl'>
+            <figure>
+              <Image
+                src='https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
+                alt='Shoes'
+                width={300}
+                height={100}
+              />
+            </figure>
+            <div className='card-body'>
+              <h3 className='card-title'>
+                Name :  {elem.name}
+              </h3>
+              <p className='card-title'>Address : {elem.address}</p>
+              <div className='card-actions justify-end'>
+                <button className='btn btn-success'>Accept</button>
+                <button className='btn btn-error'>Reject</button>
+                <button className='btn btn-primary'>Location</button>
+              </div>
+            </div>
+          </div>)
+          }
         </div>
       </div>
     </div>

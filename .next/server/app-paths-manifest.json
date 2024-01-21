@@ -1,6 +1,7 @@
 {
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/my-order/page": "app/my-order/page.js",
   "/order/page": "app/order/page.js",
-  "/add-address/page": "app/add-address/page.js"
+  "/sign-in/[[...sign-in]]/page": "app/sign-in/[[...sign-in]]/page.js",
+  "/driver-profile/page": "app/driver-profile/page.js"
 }

@@ -7,6 +7,8 @@ import message from '@/app/utlis/alert';
 const Login = () => {
   const [days, setDays] = useState(0);
 
+  const choice = [1,2,3,4,5,6,7,8,9,10];
+
   return (
     <div className='mt-1 card w-96 bg-base-100 shadow-xl overflow-x-hidden'>
       <figure >
@@ -31,16 +33,9 @@ const Login = () => {
           }}
         >
           <option disabled selected>Pick Select the days : </option>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-          <option value='6'>6</option>
-          <option value='7'>7</option>
-          <option value='8'>8</option>
-          <option value='9'>9</option>
-          <option value='10'>10</option>
+          {
+             choice.map((elem,index)=><option key={index} value={index+1}>{index+1}</option>)
+          }
         </select>
         <div className=' mt-3 card-actions justify-end'>
           {days>0 ? (
